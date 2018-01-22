@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         img_bazinga.setOnClickListener { executeAnimation() }
 
-       //val btn_next = findViewById(R.id.button_next) as Button
-       //btn_next.setOnClickListener {        }
+       val btn_next = findViewById(R.id.button_next) as Button
+       btn_next.setOnClickListener {  executeAnimation()      }
 
     }
 
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         scaleAnim.duration = 1000
         scaleAnim.repeatCount = 1
         scaleAnim.repeatMode = Animation.REVERSE
-        img_bazinga.startAnimation(scaleAnim)
+        //img_bazinga.startAnimation(scaleAnim)
 
 
         val translateAnim = TranslateAnimation(
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         translateAnim.duration = 1000
         translateAnim.repeatCount = 1
         translateAnim.repeatMode = Animation.REVERSE
-        //img_bazinga.startAnimation(translateAnim)
+        img_bazinga.startAnimation(translateAnim)
 
         val set = AnimationSet(true)
         set.addAnimation(alphaAnim)
